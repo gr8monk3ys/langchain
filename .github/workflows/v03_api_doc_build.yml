@@ -36,7 +36,7 @@ jobs:
 
       - name: "📋 Extract Repository List with yq"
         id: get-unsorted-repos
-        uses: mikefarah/yq@master
+        uses: mikefarah/yq@88a31ae8c6b34aad77d2efdecc146113cb3315d0
         with:
           cmd: |
             # Extract repos from packages.yml that are in the langchain-ai org
@@ -91,7 +91,7 @@ jobs:
           done
 
       - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         id: setup-python
         with:
           python-version: ${{ env.PYTHON_VERSION }}
