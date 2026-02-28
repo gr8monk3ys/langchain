@@ -1,3 +1,5 @@
+permissions: read-all
+
 # Label PRs based on their titles.
 #
 # Uses conventional commit types from PR titles to apply labels.

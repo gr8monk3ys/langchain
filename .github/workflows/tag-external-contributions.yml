@@ -1,3 +1,5 @@
+permissions: read-all
+
 # Automatically tag issues and pull requests as "external" or "internal"
 # based on whether the author is a member of the langchain-ai
 # GitHub organization.

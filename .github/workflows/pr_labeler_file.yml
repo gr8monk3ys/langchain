@@ -1,3 +1,5 @@
+permissions: read-all
+
 # Label PRs based on changed files.
 #
 # See `.github/pr-file-labeler.yml` to see rules for each label/directory.
