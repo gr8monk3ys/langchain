@@ -12,14 +12,15 @@ on:
     - cron: "0 8 * * *" # daily at 08:00 UTC
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: read-all
 
 jobs:
   refresh-profiles:
     name: "refresh all partner profiles"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: "📋 Checkout"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd

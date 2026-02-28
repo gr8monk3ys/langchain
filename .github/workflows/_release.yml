@@ -36,8 +36,7 @@ env:
   UV_FROZEN: "true"
   UV_NO_SYNC: "true"
 
-permissions:
-  contents: write # Required for creating GitHub releases
+permissions: read-all
 
 jobs:
   # Build the distribution package and extract version info
