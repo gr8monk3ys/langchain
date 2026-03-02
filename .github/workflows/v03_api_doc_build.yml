@@ -160,7 +160,14 @@ jobs:
           rm -rf ../langchain-api-docs-html/_build/
 
       # Commit and push changes to langchain-api-docs-html repo
-      - uses: EndBug/add-and-commit@v9
-        with:
-          cwd: langchain-api-docs-html
-          message: "Update API docs build from v0.3 branch"
+      - name: Commit and push docs changes
+        working-directory: langchain-api-docs-html
+        run: |
+          set -euo pipefail
+          if git diff --quiet --; then
+            echo "No API docs changes detected."
+            exit 0
+          fi
+          git add -A
+          git commit -m "Update API docs build from v0.3 branch"
+          git push
